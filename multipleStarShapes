@@ -1,0 +1,20 @@
+# Libraries and Pre-sets
+import turtle # Importing Turtle Library
+import math # Importing Math Library
+node = turtle.Turtle() # Giving turtle a name of "node"
+node.getscreen().bgcolor("red") # Changing background to red colour
+node.speed(10) # Change the speed of node movement
+
+# Function to draw a recursive star pattern
+def start(turtle, size):
+    if size <= 10: # Base case: if the size is 10 or less, do not draw.
+        return
+    else:
+        for i in range(10): # Loop to create a star-like pattern.
+            node.forward(size) # Move the turtle forward by 'size'.
+            start(turtle, size/2) # Recursive call to draw smaller stars.
+            node.left(216) # Turn the turtle left by 216 degrees to create a star angle.
+
+start(node, 100) # Initial call to start the drawing with a size of 100.
+
+turtle.done()
