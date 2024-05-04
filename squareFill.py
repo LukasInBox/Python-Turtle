@@ -1,5 +1,5 @@
 # Libraries and Pre-sets
-import turtle # Importing Turtle Module
+import turtle # Importing Turtle Library
 node = turtle.Turtle() # Giving turtle a name of "node"
 node.color("lime") # Setting up a colour for "node"
 
